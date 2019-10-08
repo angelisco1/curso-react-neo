@@ -1,6 +1,8 @@
 import React from 'react';
 import Titulo from './Titulo';
 import Contador from './Contador';
+import EventSwitch from './EventSwitch';
+import ListaMascotas from './ListaMascotas';
 
 class CmpIntroduccion extends React.Component {
   constructor(props) {
@@ -12,6 +14,7 @@ class CmpIntroduccion extends React.Component {
     // that = this;
     this.decrementar = this.decrementar.bind(this);
     this.incrementar = this.incrementar.bind(this);
+    this.cambiaCuenta = this.cambiaCuenta.bind(this);
   }
 
   decrementar() {
@@ -30,6 +33,12 @@ class CmpIntroduccion extends React.Component {
     });
   }
 
+  cambiaCuenta(num) {
+    this.setState({
+      cuenta: num
+    })
+  }
+
   render() {
     return (
       <div>
@@ -38,7 +47,9 @@ class CmpIntroduccion extends React.Component {
         <Titulo titulo="Subtitulo 2" />
         <Titulo cuenta={this.state.cuenta} />
         {/* <Contador /> */}
-        <Contador dec={this.decrementar} inc={this.incrementar} cuenta={this.state.cuenta} />
+        <Contador dec={this.decrementar} inc={this.incrementar} cuenta={this.state.cuenta} cambiaCuenta={this.cambiaCuenta} />
+        <EventSwitch />
+        <ListaMascotas />
       </div>
     )
   }
