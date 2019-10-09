@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import CmpIntroduccion from './components/introduccion/CmpIntroduccion';
+import CmpCicloDeVida from './components/ciclo-de-vida/CmpCicloDeVida';
+import CmpLayout from './components/layouts/CmpLayout';
 
 const App = () => (
   <div>
     {/* <h1>Hola mundo!</h1>
     <p>Un parrafo</p> */}
-    <CmpIntroduccion />
+    {/* <CmpIntroduccion /> */}
+    {/* <CmpCicloDeVida /> */}
+    <CmpLayout />
   </div>
 )
 
