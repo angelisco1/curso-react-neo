@@ -4,6 +4,8 @@ import CmpIntroduccion from './components/introduccion/CmpIntroduccion';
 import CmpCicloDeVida from './components/ciclo-de-vida/CmpCicloDeVida';
 import CmpLayout from './components/layouts/CmpLayout';
 import CmpOtros from './components/otros/CmpOtros';
+import CmpHoc from './components/hoc/CmpHoc';
+import './styles/styles.scss';
 
 const App = () => (
   <div>
@@ -13,7 +15,8 @@ const App = () => (
     {/* <CmpCicloDeVida /> */}
     {/* <CmpLayout /> */}
     {/* <CmpReferencias /> */}
-    <CmpOtros />
+    {/* <CmpOtros /> */}
+    <CmpHoc />
   </div>
 )
 
