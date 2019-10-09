@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import CmpIntroduccion from './components/introduccion/CmpIntroduccion';
 import CmpCicloDeVida from './components/ciclo-de-vida/CmpCicloDeVida';
 import CmpLayout from './components/layouts/CmpLayout';
+import CmpOtros from './components/otros/CmpOtros';
 
 const App = () => (
   <div>
@@ -10,7 +11,9 @@ const App = () => (
     <p>Un parrafo</p> */}
     {/* <CmpIntroduccion /> */}
     {/* <CmpCicloDeVida /> */}
-    <CmpLayout />
+    {/* <CmpLayout /> */}
+    {/* <CmpReferencias /> */}
+    <CmpOtros />
   </div>
 )
 
