@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { addTarea } from '../store/tareas/actions';
 
 class Form extends React.Component {
   constructor(props) {
@@ -64,4 +66,9 @@ class Form extends React.Component {
   }
 }
 
-export default Form;
+const mapDispatchToProps = {
+  // addTarea: addTarea,
+  addTarea
+}
+
+export default connect(null, mapDispatchToProps)(Form);
