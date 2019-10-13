@@ -1,0 +1,20 @@
+Archivo 'manifest.json':
+
+* Este archivo es el que permite añadir nuestra aplicación web a nuestro dispositivo movil como si fuera una aplicación nativa. En el se le indican algunos datos que se usarán para darle esa apariencia de aplicación nativa. Entre estos datos podemos encontrar el nombre, el tema de color para el toolbar y pantalla del gestor de aplicaciones, el color del fondo para la pantalla de splash, una descripción, la orientación y como se tiene que mostrar la aplicación al abrirla (standalone para que parezca que es una app nativa).
+
+* Este archivo se tiene que importar en las páginas desde las que queramos que se pueda instalar (añadir al homescreen) en nuestro dispositivo.
+
+Archivo 'service-worker.js':
+
+* Los service workers se ejecutan en segundo plano y no es necesario tener la aplicación abierta para que sigan funcionando. Al poder ejecutarlos sin necesidad de tener la web/app abierta nos permite hacer varias cosas como actualizar el service worker para usar la última versión de la aplicación.
+
+* Los service workers tienen un ciclo de vida:
+** install: se está instalando el SW y es aquí donde descargaremos los archivos del AppShell para cachearlos y que las futuras cargas sean más rápidas.
+** activate: el SW se ha actualizado a una nueva versión. Aquí eliminamos las antiguas cachés (solo si es necesario).
+** idle: estado de espera en el que se sigue ejecutando el SW.
+** terminated: si el SW no recibe ningún evento durante un tiempo largo, se va a este estado a dormir hasta que recibe el evento.
+** fetch: se ha lanzado una petición para pedir datos o descargar otros archivos.
+
+* Los SW se actualizan cuando hay un cambio mínimo en el archivo donde vive el SW. Y no se cambia a la nueva versión hasta que todas las pestañas se hayan cerrado.
+
+* Ir al archivo 'service-worker.js' para ver el código.

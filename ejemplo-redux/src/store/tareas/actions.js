@@ -40,6 +40,7 @@ export function deleteTarea(id) {
   }
 }
 
+
 export function completeTarea(tarea) {
   return (dispatch) => {
     const tareaActualizada = {nombre: tarea.nombre, hecha: !tarea.hecha};
@@ -48,6 +49,7 @@ export function completeTarea(tarea) {
       .then(() => {
         dispatch(createActionCompleteTarea({...tareaActualizada, id: tarea.id}));
       })
+      .catch(error => console.log(error))
   }
 }
 
