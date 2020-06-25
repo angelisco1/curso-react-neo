@@ -1,1 +1,1 @@
-# curso-react-neoris
+# curso-react-neo
